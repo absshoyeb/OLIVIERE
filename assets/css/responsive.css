@@ -1,0 +1,310 @@
+/* ================================
+   OLIVIÈRE RESPONSIVE CSS
+================================ */
+
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 10px 12px;
+    font-size: 18px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu li:hover > a,
+  .navmenu a.active,
+  .navmenu a.active:focus {
+    color: var(--nav-hover-color);
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  .header .topbar {
+    display: none !important;
+  }
+
+  .header .branding {
+    min-height: 80px !important;
+    padding: 10px 0 !important;
+  }
+
+  .header .logo h1 {
+    font-size: 38px !important;
+  }
+
+  .mobile-nav-toggle {
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #0c0b09 !important;
+    z-index: 9999 !important;
+    padding: 90px 28px 30px !important;
+    overflow: hidden !important;
+  }
+
+  .mobile-nav-active .navmenu > ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    list-style: none !important;
+  }
+
+  .mobile-nav-active .navmenu li {
+    width: 100% !important;
+  }
+
+  .mobile-nav-active .navmenu a {
+    display: block !important;
+    width: 100% !important;
+    padding: 4px 0 !important;
+    color: var(--accent-color) !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu a.active,
+  .mobile-nav-active .navmenu a:hover {
+    color: #ffffff !important;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed !important;
+    top: 28px !important;
+    right: 28px !important;
+    color: #ffffff !important;
+    z-index: 10000 !important;
+  }
+
+  section,
+  .section {
+    scroll-margin-top: 60px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .specials .nav-link {
+    border: 0 !important;
+    padding: 15px !important;
+  }
+
+  .specials .nav-link.active {
+    color: #0c0b09 !important;
+    background: var(--accent-color) !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+
+  .hero h2 {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 18px !important;
+    line-height: 1.6;
+  }
+
+  .hero .cta-btn {
+    font-size: 13px;
+    padding: 10px 22px;
+  }
+
+  .specials .nav-tabs {
+    border: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .specials .nav-item {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .specials .nav-link,
+  .specials .nav-link.active {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 60px !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+    font-size: 18px !important;
+    line-height: 60px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .specials .nav-link {
+    background: transparent !important;
+    color: #ffffff !important;
+    border-left: 2px solid rgba(205, 164, 94, 0.4) !important;
+  }
+
+  .specials .nav-link.active {
+    background: var(--accent-color) !important;
+    color: #0c0b09 !important;
+    border-left: 2px solid var(--accent-color) !important;
+  }
+
+  .book-a-table .php-email-form {
+    padding: 0 8px !important;
+  }
+
+  .book-a-table .php-email-form .row {
+    row-gap: 18px;
+  }
+
+  .book-a-table .php-email-form input,
+  .book-a-table .php-email-form textarea {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: var(--accent-color) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(205, 164, 94, 0.25) !important;
+    border-radius: 0 !important;
+  }
+
+  .book-a-table .php-email-form input::placeholder,
+  .book-a-table .php-email-form textarea::placeholder,
+  .contact .php-email-form input::placeholder,
+  .contact .php-email-form textarea::placeholder {
+    color: var(--accent-color) !important;
+    opacity: 0.8;
+  }
+
+  .book-a-table .php-email-form input:focus,
+  .book-a-table .php-email-form textarea:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px rgba(205, 164, 94, 0.12);
+    outline: none;
+  }
+
+  .book-a-table input[type="date"]::-webkit-calendar-picker-indicator,
+  .book-a-table input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(78%) sepia(35%) saturate(500%) hue-rotate(2deg);
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 575px) {
+  .header .branding {
+    min-height: auto !important;
+    padding: 12px 0 !important;
+  }
+
+  .header .logo h1 {
+    font-size: 34px !important;
+  }
+
+  .brand-left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .brand-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .brand-contact div {
+    font-size: 14px;
+  }
+
+  .hero h2 {
+    font-size: 36px !important;
+  }
+
+  .hero p {
+    font-size: 20px !important;
+  }
+
+  .hero .d-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero .cta-btn {
+    text-align: center;
+    margin-right: 0 !important;
+  }
+
+  .section-title p {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .book-a-table .php-email-form {
+    padding: 20px !important;
+  }
+}
+
+/* Extra Small */
+@media (max-width: 480px) {
+  .hero .cta-btn {
+    font-size: 12px;
+  }
+}
